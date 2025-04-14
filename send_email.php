@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "firstemail@example.com, secondemail@example.com"; // Add your emails here
+    $to = "boothdj1991@gmail.com, cshuler76@gmail.com"; // Add your emails here
     $subject = "New Contact Form Submission from BS Tech";
 
     $name = htmlspecialchars($_POST['name']);
