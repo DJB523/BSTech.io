@@ -19,7 +19,7 @@ nav {
     position: fixed;
     background: #1b1b1b;
     width: 100%;
-    padding: 10px 0;
+    padding: 0.625rem 0;
     z-index: 12;
 }
 
