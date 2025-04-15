@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 :root {
     --vh: 1vh;
+    --nav-height: 4.125rem;
 }
 
 * {
@@ -19,7 +20,9 @@ nav {
     position: fixed;
     background: #1b1b1b;
     width: 100%;
-    padding: 0.625rem 0;
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
     z-index: 12;
 }
 
@@ -85,15 +88,14 @@ nav .menu {
 }
 
 .center {
-    padding-top: 60px;
     position: absolute;
-    top: 50%;
+    top: calc(50% + var(--nav-height) / 2); /* Push it down by half the nav height */
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
     padding: 0 20px;
     text-align: center;
-    max-height: 80vh;
+    max-height: calc(80vh - var(--nav-height));
     overflow-y: auto;
 }
 
