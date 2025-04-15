@@ -193,7 +193,7 @@ nav .menu {
     margin: 2rem auto;
     color: white;
     font-family: sans-serif;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(14, 124, 19, 0.5);
 }
 
 /* Form Layout */
@@ -268,7 +268,7 @@ nav .menu {
     margin: 2rem auto;
     color: white;
     font-family: sans-serif;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(14, 124, 19, 0.5);
     text-align: left;
 }
 
