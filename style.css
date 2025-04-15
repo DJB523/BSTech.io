@@ -1,279 +1,314 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+:root {
+    --vh: 1vh;
+}
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
+
 ::selection {
-  color: #000;
-  background: #fff;
+    color: #000;
+    background: #fff;
 }
+
 nav {
-  position: fixed;
-  background: #1b1b1b;
-  width: 100%;
-  padding: 10px 0;
-  z-index: 12;
+    position: fixed;
+    background: #1b1b1b;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 12;
 }
+
 nav .menu {
-  max-width: 1250px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
 }
+
 .menu .logo a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 35px;
-  font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
 }
+
 .menu ul {
-  display: inline-flex;
+    display: inline-flex;
 }
+
 .menu ul li {
-  list-style: none;
-  margin-left: 7px;
+    list-style: none;
+    margin-left: 7px;
 }
+
 .menu ul li:first-child {
-  margin-left: 0px;
+    margin-left: 0px;
 }
+
 .menu ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 8px 15px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
+
 .menu ul li a:hover {
-  background: #fff;
-  color: black;
+    background: #fff;
+    color: black;
 }
+
 .img {
-  background: url("logo.png") no-repeat;
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  position: relative;
+    background: url("logo.png") no-repeat;
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 100);
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
+
 .img::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.4);
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
 }
+
 .center {
-  position: absolute;
-  top: 52%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  padding: 0 20px;
-  text-align: center;
+    padding-top: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+    max-height: 80vh;
+    overflow-y: auto;
 }
+
 .center .title {
-  color: #fff;
-  font-size: 55px;
-  font-weight: 600;
+    color: #fff;
+    font-size: clamp(24px, 5vw, 55px);
+    font-weight: 600;
 }
+
 .center .sub_title {
-  color: #fff;
-  font-size: 52px;
-  font-weight: 600;
+    color: #fff;
+    font-size: clamp(22px, 4.5vw, 52px);
+    font-weight: 600;
 }
+
 .center .text {
-  color: #fff;
-  font-size: 40px;
-  font-weight: 600;
+    color: #fff;
+    font-size: clamp(20px, 4vw, 40px);
+    font-weight: 600;
 }
+
 .center .sub_text {
-  color: #fff;
-  font-size: 38px;
-  font-weight: 600;
+    color: #fff;
+    font-size: clamp(18px, 3.5vw, 38px);
+    font-weight: 600;
 }
+
 .center .small_text {
-  color: #fff;
-  font-size: 22px;
-  font-weight: 600;
+    color: #fff;
+    font-size: clamp(14px, 2.8vw, 22px);
+    font-weight: 600;
 }
+
 .center .btns {
-  margin-top: 20px;
+    margin-top: 20px;
 }
+
 .center .btns button {
-  height: 55px;
-  width: 170px;
-  border-radius: 5px;
-  border: none;
-  margin: 0 10px;
-  border: 2px solid white;
-  font-size: 20px;
-  font-weight: 500;
-  padding: 0 10px;
-  cursor: pointer;
-  outline: none;
-  transition: all 0.3s ease;
+    height: 55px;
+    width: 170px;
+    border-radius: 5px;
+    border: none;
+    margin: 0 10px;
+    border: 2px solid white;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0 10px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
 }
+
 .center .btns button:first-child {
-  color: #fff;
-  background: none;
+    color: #fff;
+    background: none;
 }
+
 .btns button:first-child:hover {
-  background: white;
-  color: black;
+    background: white;
+    color: black;
 }
+
 .center .btns button:last-child {
-  background: white;
-  color: black;
+    background: white;
+    color: black;
 }
+
+
 /* Contact Box Styles */
+
 .contact-box {
-  background-color: rgba(0, 0, 0, 0.6); /* 80% see-through black */
-  padding: 2rem;
-  border-radius: 10px;
-  width: 100%;
-  max-width: 720px; /* Same width as ChatGPT's input area */
-  margin: 2rem auto;
-  color: white;
-  font-family: sans-serif;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 720px;
+    margin: 2rem auto;
+    color: white;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
+
 
 /* Form Layout */
+
 .contact-box form {
-  display: flex;
-  flex-direction: column;
-  max-width: 720px;
-  width: 100%;
-  margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
 }
+
 
 /* Labels */
+
 .contact-box label {
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
 }
 
+
 /* Input Fields, Select, Textarea */
+
 .contact-box input,
 .contact-box select,
 .contact-box textarea {
-  background-color: rgba(0, 0, 0, 0.8); !important;
-  color: #fff !important;
-  border: 1px solid #444;
-  border-radius: 5px;
-  padding: 0.5rem;
-  font-size: 1rem;
-  appearance: none;
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    color: #fff !important;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    appearance: none;
 }
+
 
 /* Placeholder text styling */
+
 .contact-box input::placeholder,
 .contact-box textarea::placeholder {
-  color: #ccc;
+    color: #ccc;
 }
 
+
 /* Focus Effects */
+
 .contact-box input:focus,
 .contact-box select:focus,
 .contact-box textarea:focus {
-  outline: none;
-  border-color: #888;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    outline: none;
+    border-color: #888;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
 }
 
+
 /* Submit Button */
+
 .contact-box button {
-  margin-top: 1.5rem;
-  background-color: #000;
-  color: white;
-  border: 1px solid #444;
-  padding: 0.75rem;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.1s;
+    margin-top: 1.5rem;
+    background-color: #000;
+    color: white;
+    border: 1px solid #444;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
 }
 
 .contact-box button:hover {
-  background-color: #222;
-  transform: scale(1.02);
+    background-color: #222;
+    transform: scale(1.02);
 }
-/* Contact Box Styles */
+
+
+/* Services Box */
+
 .service-box {
-  background-color: rgba(0, 0, 0, 0.6); /* 80% see-through black */
-  padding: 2rem;
-  border-radius: 10px;
-  width: 100%;
-  max-width: 720px; /* Same width as ChatGPT's input area */
-  margin: 2rem auto;
-  color: white;
-  font-family: sans-serif;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
-  text-align: left;
-}
-/* ✅ Responsive Mobile Fixes */
-@media screen and (max-width: 600px) {
-  .menu {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0 10px;
-  }
-
-  .menu ul {
-    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
     width: 100%;
-  }
-
-  .menu ul li {
-    margin: 8px 0;
-  }
-
-  .center .title {
-    font-size: 32px;
-  }
-
-  .center .sub_title {
-    font-size: 30px;
-  }
-
-  .center .text {
-    font-size: 26px;
-  }
-
-  .center .sub_text {
-    font-size: 24px;
-  }
-
-  .center .small_text {
-    font-size: 18px;
-  }
-
-  .center .btns {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .center .btns button {
-    width: 90%;
-    margin: 10px 0;
-    font-size: 18px;
-  }
-
-  .contact-box,
-  .service-box {
-    padding: 1rem;
-    margin: 1rem;
-  }
+    max-width: 720px;
+    margin: 2rem auto;
+    color: white;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: left;
 }
 
-
+@media screen and (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 10px;
+    }
+    .menu ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .menu ul li {
+        margin: 8px 0;
+    }
+    .center .title {
+        font-size: 32px;
+    }
+    .center .sub_title {
+        font-size: 30px;
+    }
+    .center .text {
+        font-size: 26px;
+    }
+    .center .sub_text {
+        font-size: 24px;
+    }
+    .center .small_text {
+        font-size: 18px;
+    }
+    .center .btns {
+        flex-direction: column;
+        align-items: center;
+    }
+    .center .btns button {
+        width: 90%;
+        margin: 10px 0;
+        font-size: 18px;
+    }
+    .contact-box,
+    .service-box {
+        padding: 1rem;
+        margin: 1rem;
+    }
+}
 
 
 
