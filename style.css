@@ -59,7 +59,8 @@ nav .menu {
 }
 
 .menu ul {
-    display: inline-flex;
+  display: inline-flex;
+  transition: all 0.3s ease;
 }
 
 .menu ul li {
@@ -282,82 +283,45 @@ nav .menu {
 
 /* Mobile Navigation */
 @media (max-width: 768px) {
-    nav {
-        padding: 5px 10px;
-    }
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 10px;
+  }
 
-    .menu {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-    }
+  .menu ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #1b1b1b;
+    margin: 0;
+    padding: 0;
+  }
 
-    .logo a {
-        font-size: 1.3rem;
-        padding: 5px 0;
-    }
+  .menu ul.active {
+    display: flex;
+  }
 
-    .menu-toggle {
-        display: block;
-    }
+  .menu ul li {
+    width: 100%;
+    text-align: left;
+    border-top: 1px solid #333;
+  }
 
-    .menu ul {
-        flex-direction: column;
-        width: 100%;
-        background-color: #1b1b1b;
-        display: none;
-        padding: 0;
-    }
+  .menu ul li a {
+    display: block;
+    width: 100%;
+    padding: 12px;
+  }
 
-    .menu ul.active {
-        display: flex;
-    }
-
-    .menu ul li {
-        width: 100%;
-        border-top: 1px solid #444;
-    }
-
-    .menu ul li a {
-        display: block;
-        padding: 12px;
-    }
-
-    .center .title {
-        font-size: 2.125rem;
-    }
-
-    .center .sub_title {
-        font-size: 2rem;
-    }
-
-    .center .text {
-        font-size: 1.75rem;
-    }
-
-    .center .sub_text {
-        font-size: 1.5rem;
-    }
-
-    .center .small_text {
-        font-size: 1.1rem;
-    }
-
-    .center .btns {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .center .btns button {
-        width: 90%;
-        margin: 10px 0;
-        font-size: 1.1rem;
-    }
-
-    .contact-box,
-    .service-box {
-        padding: 1rem;
-        margin: 1rem;
-    }
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+    padding: 10px;
+    font-size: 1.5rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
 }
