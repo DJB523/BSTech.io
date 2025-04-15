@@ -353,6 +353,39 @@ nav .menu {
     padding: 12px;
   }
 }
+@media (max-width: 768px) {
+    nav {
+        padding: 5px 10px;
+    }
+
+    .logo a {
+        font-size: 18px;
+        padding: 5px 0;
+    }
+
+    .menu-toggle {
+        font-size: 24px;
+        padding: 5px;
+    }
+
+    .menu ul {
+        font-size: 14px;
+        padding: 0;
+    }
+
+    .menu ul li a {
+        padding: 10px 15px;
+    }
+
+    .menu ul li {
+        border-top: 1px solid #444;
+    }
+
+    .menu {
+        gap: 5px;
+    }
+}
+
 
 
 
