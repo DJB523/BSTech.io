@@ -73,10 +73,11 @@ nav .menu {
 .img {
     background: url("logo.png") no-repeat;
     width: 100%;
-    height: calc(var(--vh, 1vh) * 100);
+    height: calc((var(--vh, 1vh) * 100) - var(--nav-height));
     background-size: cover;
     background-position: center;
     position: relative;
+    margin-top: var(--nav-height); /* Push the image below the nav */
 }
 
 .img::before {
@@ -89,13 +90,13 @@ nav .menu {
 
 .center {
     position: absolute;
-    top: calc(50% + var(--nav-height) / 2); /* Push it down by half the nav height */
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
     padding: 0 20px;
     text-align: center;
-    max-height: calc(80vh - var(--nav-height));
+    max-height: 80vh;
     overflow-y: auto;
 }
 
