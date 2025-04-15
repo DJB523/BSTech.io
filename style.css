@@ -309,45 +309,50 @@ nav .menu {
         margin: 1rem;
     }
 }
-@media (max-width: 768px) {
-  nav {
-    padding: 8px 0;
-  }
+/* Menu toggle button */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
 
+/* Mobile Navigation */
+@media (max-width: 768px) {
   .menu {
     flex-direction: column;
     align-items: flex-start;
-    padding: 0 15px;
   }
 
-  .menu .logo {
-    font-size: 28px;
-    margin-bottom: 10px;
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+    padding: 5px 10px;
   }
 
   .menu ul {
+    display: none;
     flex-direction: column;
     width: 100%;
+    background-color: #1b1b1b;
+  }
+
+  .menu ul.active {
+    display: flex;
   }
 
   .menu ul li {
-    margin: 5px 0;
     width: 100%;
+    text-align: left;
+    border-top: 1px solid #333;
   }
 
   .menu ul li a {
     display: block;
     width: 100%;
-    padding: 10px;
-    font-size: 16px;
+    padding: 12px;
   }
 }
-
-
-
-
-
-
 
 
 
