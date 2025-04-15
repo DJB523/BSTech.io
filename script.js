@@ -20,3 +20,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Add other scripts below safely
 });
+// =======================
+// Mobile Navigation Toggle
+// =======================
+function toggleMenu() {
+    const menuList = document.querySelector("nav .menu ul");
+    menuList.classList.toggle("active");
+}
+
+// Optional: Close menu when a nav link is clicked (for single-page feel)
+document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll("nav .menu ul li a");
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            const menuList = document.querySelector("nav .menu ul");
+            if (menuList.classList.contains("active")) {
+                menuList.classList.remove("active");
+            }
+        });
+    });
+});
