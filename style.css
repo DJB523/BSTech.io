@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
 :root {
     --vh: 1vh;
     --nav-height: 4.125rem;
@@ -16,6 +17,10 @@
     background: #fff;
 }
 
+body {
+    padding-top: var(--nav-height);
+}
+
 nav {
     position: fixed;
     background: #1b1b1b;
@@ -24,10 +29,13 @@ nav {
     display: flex;
     align-items: center;
     z-index: 12;
+    top: 0;
+    left: 0;
 }
 
 nav .menu {
     max-width: 1250px;
+    width: 100%;
     margin: auto;
     display: flex;
     align-items: center;
@@ -77,6 +85,7 @@ nav .menu {
     background-size: cover;
     background-position: center;
     position: relative;
+    margin-top: var(--nav-height);
 }
 
 .img::before {
@@ -89,7 +98,7 @@ nav .menu {
 
 .center {
     position: absolute;
-    top: calc(50% + var(--nav-height) / 2); /* Push it down by half the nav height */
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -165,7 +174,6 @@ nav .menu {
 
 
 /* Contact Box Styles */
-
 .contact-box {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 2rem;
@@ -178,9 +186,7 @@ nav .menu {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-
 /* Form Layout */
-
 .contact-box form {
     display: flex;
     flex-direction: column;
@@ -189,18 +195,14 @@ nav .menu {
     margin: 0 auto;
 }
 
-
 /* Labels */
-
 .contact-box label {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
     font-weight: bold;
 }
 
-
 /* Input Fields, Select, Textarea */
-
 .contact-box input,
 .contact-box select,
 .contact-box textarea {
@@ -213,17 +215,13 @@ nav .menu {
     appearance: none;
 }
 
-
 /* Placeholder text styling */
-
 .contact-box input::placeholder,
 .contact-box textarea::placeholder {
     color: #ccc;
 }
 
-
 /* Focus Effects */
-
 .contact-box input:focus,
 .contact-box select:focus,
 .contact-box textarea:focus {
@@ -232,9 +230,7 @@ nav .menu {
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
 }
 
-
 /* Submit Button */
-
 .contact-box button {
     margin-top: 1.5rem;
     background-color: #000;
@@ -252,9 +248,7 @@ nav .menu {
     transform: scale(1.02);
 }
 
-
 /* Services Box */
-
 .service-box {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 2rem;
@@ -268,122 +262,93 @@ nav .menu {
     text-align: left;
 }
 
-@media screen and (max-width: 600px) {
-    .menu {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0 10px;
-    }
-    .menu ul {
-        flex-direction: column;
-        width: 100%;
-    }
-    .menu ul li {
-        margin: 8px 0;
-    }
-    .center .title {
-        font-size: 2.125rem;
-    }
-    .center .sub_title {
-        font-size: 2rem;
-    }
-    .center .text {
-        font-size: 1.75rem;
-    }
-    .center .sub_text {
-        font-size: 1.5rem;
-    }
-    .center .small_text {
-        font-size: 1.1rem;
-    }
-    .center .btns {
-        flex-direction: column;
-        align-items: center;
-    }
-    .center .btns button {
-        width: 90%;
-        margin: 10px 0;
-        font-size: 1.1rem;
-    }
-    .contact-box,
-    .service-box {
-        padding: 1rem;
-        margin: 1rem;
-    }
-}
 /* Menu toggle button */
 .menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  color: white;
-  cursor: pointer;
+    display: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
 }
 
 /* Mobile Navigation */
-@media (max-width: 768px) {
-  .menu {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .menu-toggle {
-    display: block;
-    margin-left: auto;
-    padding: 5px 10px;
-  }
-
-  .menu ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #1b1b1b;
-  }
-
-  .menu ul.active {
-    display: flex;
-  }
-
-  .menu ul li {
-    width: 100%;
-    text-align: left;
-    border-top: 1px solid #333;
-  }
-
-  .menu ul li a {
-    display: block;
-    width: 100%;
-    padding: 12px;
-  }
-}
 @media (max-width: 768px) {
     nav {
         padding: 5px 10px;
     }
 
+    .menu {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
     .logo a {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         padding: 5px 0;
     }
 
     .menu-toggle {
-        font-size: 1.5rem;
-        padding: 5px;
+        display: block;
     }
 
     .menu ul {
-        font-size: .9rem;
+        flex-direction: column;
+        width: 100%;
+        background-color: #1b1b1b;
+        display: none;
         padding: 0;
     }
 
-    .menu ul li a {
-        padding: 10px 15px;
+    .menu ul.active {
+        display: flex;
     }
 
     .menu ul li {
+        width: 100%;
         border-top: 1px solid #444;
     }
 
-    .menu {
-        gap: 5px;
+    .menu ul li a {
+        display: block;
+        padding: 12px;
+    }
+
+    .center .title {
+        font-size: 2.125rem;
+    }
+
+    .center .sub_title {
+        font-size: 2rem;
+    }
+
+    .center .text {
+        font-size: 1.75rem;
+    }
+
+    .center .sub_text {
+        font-size: 1.5rem;
+    }
+
+    .center .small_text {
+        font-size: 1.1rem;
+    }
+
+    .center .btns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .center .btns button {
+        width: 90%;
+        margin: 10px 0;
+        font-size: 1.1rem;
+    }
+
+    .contact-box,
+    .service-box {
+        padding: 1rem;
+        margin: 1rem;
     }
 }
