@@ -1,6 +1,8 @@
-// ========== DOM Ready ==========
+// =======================
+// Page Load Logic
+// =======================
 document.addEventListener("DOMContentLoaded", () => {
-    // Update title and subtitle if they exist
+    // Example: Safely change text content of elements
     const title = document.querySelector(".title");
     if (title) {
         title.textContent = "Welcome to BS Tech!";
@@ -11,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         subtitle.textContent = "Small Business & Home IT Support";
     }
 
-    // Add click alerts to buttons
+    // Example: Add event listener to buttons (if they exist)
     const buttons = document.querySelectorAll(".btns button");
     buttons.forEach((btn, index) => {
         btn.addEventListener("click", () => {
@@ -19,28 +21,25 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Close menu on nav link click (mobile UX)
-    const navLinks = document.querySelectorAll("nav .menu ul li a");
+    // =======================
+    // Mobile Navigation Toggle
+    // =======================
+    const toggle = document.getElementById("menu-toggle");
+    const navList = document.getElementById("nav-list");
+
+    if (toggle && navList) {
+        toggle.addEventListener("click", () => {
+            navList.classList.toggle("active");
+        });
+    }
+
+    // Optional: Close menu when a nav link is clicked (for single-page apps or better UX)
+    const navLinks = document.querySelectorAll("#nav-list a");
     navLinks.forEach(link => {
         link.addEventListener("click", () => {
-            const menuList = document.querySelector("nav .menu ul");
-            if (menuList.classList.contains("active")) {
-                menuList.classList.remove("active");
+            if (navList.classList.contains("active")) {
+                navList.classList.remove("active");
             }
         });
     });
-
-    // Attach toggle to the hamburger
-    const menuToggle = document.querySelector(".menu-toggle");
-    if (menuToggle) {
-        menuToggle.addEventListener("click", toggleMenu);
-    }
 });
-
-// ========== Toggle Mobile Menu ==========
-function toggleMenu() {
-    const menuList = document.querySelector("nav .menu ul");
-    if (menuList) {
-        menuList.classList.toggle("active");
-    }
-}
