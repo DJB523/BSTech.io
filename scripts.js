@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Example: Add event listener to buttons (if they exist)
      const buttons = document.querySelectorAll(".btns button");
      buttons.forEach((btn, index) => {
-        //btn.addEventListener("click", () => {
+        btn.addEventListener("click", () => {
             //alert(`Button ${index + 1} clicked!`);
         });
     });
