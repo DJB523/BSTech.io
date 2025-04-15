@@ -1,5 +1,6 @@
+// ========== DOM Ready ==========
 document.addEventListener("DOMContentLoaded", () => {
-    // Example: Safely change text content of elements
+    // Update title and subtitle if they exist
     const title = document.querySelector(".title");
     if (title) {
         title.textContent = "Welcome to BS Tech!";
@@ -10,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         subtitle.textContent = "Small Business & Home IT Support";
     }
 
-    // Example: Add event listener to buttons (if they exist)
+    // Add click alerts to buttons
     const buttons = document.querySelectorAll(".btns button");
     buttons.forEach((btn, index) => {
         btn.addEventListener("click", () => {
@@ -18,18 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Add other scripts below safely
-});
-// =======================
-// Mobile Navigation Toggle
-// =======================
-function toggleMenu() {
-    const menuList = document.querySelector("nav .menu ul");
-    menuList.classList.toggle("active");
-}
-
-// Optional: Close menu when a nav link is clicked (for single-page feel)
-document.addEventListener("DOMContentLoaded", () => {
+    // Close menu on nav link click (mobile UX)
     const navLinks = document.querySelectorAll("nav .menu ul li a");
     navLinks.forEach(link => {
         link.addEventListener("click", () => {
@@ -39,4 +29,18 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+    // Attach toggle to the hamburger
+    const menuToggle = document.querySelector(".menu-toggle");
+    if (menuToggle) {
+        menuToggle.addEventListener("click", toggleMenu);
+    }
 });
+
+// ========== Toggle Mobile Menu ==========
+function toggleMenu() {
+    const menuList = document.querySelector("nav .menu ul");
+    if (menuList) {
+        menuList.classList.toggle("active");
+    }
+}
